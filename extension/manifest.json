@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "SafeSpeak",
+  "version": "1.0",
+  "description": "Detects hate speech using AI",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://goeldeepak747-safespeak-backend.hf.space/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
